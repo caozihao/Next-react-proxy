@@ -72,26 +72,18 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/next/dist/pages/_error.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("next/error")
-
-
-/***/ }),
-
 /***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./node_modules/next/dist/pages/_error.js");
+module.exports = __webpack_require__("D:\\Project\\Study\\next\\Next-react-proxy\\node_modules\\_next@6.1.1@next\\dist\\pages\\_error.js");
 
 
 /***/ }),
 
-/***/ "next/error":
+/***/ "D:\\Project\\Study\\next\\Next-react-proxy\\node_modules\\_next@6.1.1@next\\dist\\pages\\_error.js":
 /***/ (function(module, exports) {
 
-module.exports = require("next/error");
+module.exports = require("D:\\Project\\Study\\next\\Next-react-proxy\\node_modules\\_next@6.1.1@next\\dist\\pages\\_error.js");
 
 /***/ })
 

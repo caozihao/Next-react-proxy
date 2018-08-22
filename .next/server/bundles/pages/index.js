@@ -85,7 +85,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__("axios");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 
-var _jsxFileName = "F:\\Project\\study\\demo\\with-custom-reverse-proxy-app\\pages\\index.js";
+var _jsxFileName = "D:\\Project\\Study\\next\\Next-react-proxy\\pages\\index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -135,8 +135,7 @@ function (_React$Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                // const { data } = await axios.get('/api/');
-                // console.log('data ->', data);
+                //如果是Koa，则需要在url前面加上域名和端口号 
                 fetchLoanInfoConfig = {
                   method: 'GET',
                   url: '/lendApi/loan/fetch_loan_info',
@@ -202,34 +201,12 @@ function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("content", {
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 67
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("pre", {
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 68
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        }
-      }, "/api/", this.props.queryString, " routed to https://swapi.co/api/", this.props.queryString), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
-        href: "?people/2",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        }
-      }, "Try"), "\xA0", __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
-        href: "/",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75
-        }
-      }, "Reset")), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("pre", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
         }
       }, this.state.response ? this.state.response : 'Loading...'));
     }

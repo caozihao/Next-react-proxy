@@ -822,7 +822,7 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/process/browser.js")))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/_process@0.11.10@process/browser.js")))
 
 /***/ }),
 
@@ -1599,7 +1599,7 @@ function isSlowBuffer (obj) {
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/harmony-module.js":
+/***/ "./node_modules/_webpack@3.10.0@webpack/buildin/harmony-module.js":
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -1636,14 +1636,14 @@ module.exports = function(originalModule) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__ = __webpack_require__("./node_modules/_@babel_runtime@7.0.0-beta.42@@babel/runtime/regenerator/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/_react@16.4.2@react/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__("./node_modules/_axios@0.18.0@axios/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 
-var _jsxFileName = "F:\\Project\\study\\demo\\with-custom-reverse-proxy-app\\pages\\index.js";
+var _jsxFileName = "D:\\Project\\Study\\next\\Next-react-proxy\\pages\\index.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -1693,8 +1693,7 @@ function (_React$Component) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                // const { data } = await axios.get('/api/');
-                // console.log('data ->', data);
+                //如果是Koa，则需要在url前面加上域名和端口号 
                 fetchLoanInfoConfig = {
                   method: 'GET',
                   url: '/lendApi/loan/fetch_loan_info',
@@ -1760,34 +1759,12 @@ function (_React$Component) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("content", {
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 67
+        }
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("pre", {
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 68
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        }
-      }, "/api/", this.props.queryString, " routed to https://swapi.co/api/", this.props.queryString), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        }
-      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
-        href: "?people/2",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        }
-      }, "Try"), "\xA0", __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("a", {
-        href: "/",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75
-        }
-      }, "Reset")), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement("pre", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
         }
       }, this.state.response ? this.state.response : 'Loading...'));
     }
@@ -1845,7 +1822,7 @@ function (_React$Component) {
       }
     })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
   
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/_webpack@3.10.0@webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 

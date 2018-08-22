@@ -72,26 +72,18 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/next/dist/pages/_document.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("next/document")
-
-
-/***/ }),
-
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./node_modules/next/dist/pages/_document.js");
+module.exports = __webpack_require__("D:\\Project\\Study\\next\\Next-react-proxy\\node_modules\\_next@6.1.1@next\\dist\\pages\\_document.js");
 
 
 /***/ }),
 
-/***/ "next/document":
+/***/ "D:\\Project\\Study\\next\\Next-react-proxy\\node_modules\\_next@6.1.1@next\\dist\\pages\\_document.js":
 /***/ (function(module, exports) {
 
-module.exports = require("next/document");
+module.exports = require("D:\\Project\\Study\\next\\Next-react-proxy\\node_modules\\_next@6.1.1@next\\dist\\pages\\_document.js");
 
 /***/ })
 

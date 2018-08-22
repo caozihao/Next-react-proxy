@@ -2,7 +2,13 @@
 const express = require('express');
 const next = require('next')
 const proxyMiddleware = require('http-proxy-middleware')
-const cors = require('cors')
+const port = parseInt(process.env.PORT, 10) || 3000
+const env = process.env.NODE_ENV
+const dev = env !== 'production'
+const app = next({
+  dir: '.', // base directory where everything is, could move to src later
+  dev
+})
 
 const devProxy = {
   '/api': {
@@ -24,14 +30,6 @@ const devProxy = {
 
 }
 
-const port = parseInt(process.env.PORT, 10) || 3000
-const env = process.env.NODE_ENV
-const dev = env !== 'production'
-const app = next({
-  dir: '.', // base directory where everything is, could move to src later
-  dev
-})
-
 const handle = app.getRequestHandler()
 
 let server
@@ -39,11 +37,8 @@ app
   .prepare()
   .then(() => {
     server = express()
-
-    // server.options('*', cors())
-    // Set up the proxy.
+    console.log('后端框架-> express');
     if (dev && devProxy) {
-
       Object.keys(devProxy).forEach(function (context) {
         server.use(proxyMiddleware(context, devProxy[context]))
       })

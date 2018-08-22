@@ -5,6 +5,9 @@
     "axios": "^0.18.0",
     "cors": "^2.8.4",
     "express": "^4.15.3",
+    "koa": "^2.5.2",
+    "koa-router": "^7.4.0",
+    "koa2-connect": "^1.0.2",
     "next": "^6.1.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
@@ -17,8 +20,10 @@
     "http-proxy-middleware": "^0.17.4"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development PORT=3000 node server.js",
+    "startkoa": "node server_koa.js",
+    "start": "node server_express.js",
+    "dev": "cross-env NODE_ENV=development PORT=3000 node server_express.js",
     "build": "next build",
-    "prod": "cross-env NODE_ENV=production PORT=3000 node server.js"
+    "prod": "cross-env NODE_ENV=production PORT=3000 node server_express.js"
   }
 }
