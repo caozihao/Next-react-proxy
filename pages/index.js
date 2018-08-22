@@ -1,74 +1,35 @@
 import React from 'react'
-import axios from 'axios';
+import Link from 'next/link'
 
-export default class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { response: '' }
+class GetData extends React.Component {
+  static getInitialProps({ req }) {
+    return {};
   }
 
-  static async getInitialProps({ pathname, query }) {
-    return {
-      pathname,
-      query,
-      queryString: Object.keys(query).join('')
-    }
-  }
+  /*
+  以下页面跳转路由都没问题，页面刷新会报错 connect ECONNREFUSED 127.0.0.1:80（express和koa2下面表现形式一样）
+  解决方法：
+  1，把请求获取数据的方法放在 async componentDidMount里，而不是static async getInitialProps里
+  2，在API前面加上http://localhost:3000/
 
-  async componentDidMount() {
-    //如果是Koa，则需要在url前面加上域名和端口号 
-
-    const fetchLoanInfoConfig = {
-      method: 'GET',
-      url: '/lendApi/loan/fetch_loan_info',
-      headers: {
-        'Access-Token': '5442b388b1f946e1a6fd7d965e1a2045',
-        'Account-Code': '405449472743571456',
-        'Client-Id': '803',
-        'Client-Version': '2.0.0',
-        'Country': 'CN',
-        'Language': 'zh-CN',
-        'Timestamp': 1534864736570,
-        'User-Code': 405449472743571456
-      }
-    }
-
-    const loginInConfig = {
-      method: 'POST',
-      url: '/lendApi/account/login',
-      headers: {
-        'Client-Id': '803',
-        'Client-Version': '2.0.0',
-        'Country': 'CN',
-        'Language': 'zh-CN',
-        'Timestamp': 1534864736570,
-        'User-Code': 405449472743571456
-      },
-      data: {
-        account: "13564410428",
-        password: "2B966AF4E17D5193B69E76855EC74AEA"
-      }
-    }
-
-    const querySlotByCodeConfig = {
-      method: 'GET',
-      url: '/monkeyApi/ad/slot/query_slot_by_code?adSlotCode=mo9.libra.news',
-      headers: {
-        'Client-Id': 503,
-      }
-    }
-
-    const { data } = await axios(loginInConfig)
-    this.setState({ response: JSON.stringify(data) })
-  }
+  注：
+  1，解决方法1用生命周期来解决，具体原因还在研究中；
+  2，解决方法2是因为，如果没有在请求页面加上域名和端口，则服务器对默认host：port的请求为127.0.0.1:80，此时在请求前面加上http://localhost:3000/ 就可以了
+  */
 
   render() {
+    const { } = this.props
     return (
-      <content>
-        <pre>
-          {this.state.response ? this.state.response : 'Loading...'}
-        </pre>
-      </content>
+      <div>
+        <div>
+          <p><Link href='/main'><a><b>main</b></a></Link></p>
+          <p><Link href='/GetData'><a><b>GetData</b></a></Link>（请求数据：getInitialProps，端口和域名：无,刷新报错：是）</p>
+          <p><Link href='/GetData2'><a><b>GetData2</b></a></Link>（请求数据：componentDidMount，端口和域名：无,刷新报错：否）</p>
+          <p><Link href='/GetData3'><a><b>GetData3</b></a></Link> （请求数据：getInitialProps里，端口和域名：有,刷新报错：否）</p>
+        </div>
+      </div>
     )
   }
 }
+
+export default GetData
